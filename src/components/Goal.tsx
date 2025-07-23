@@ -1,14 +1,16 @@
+import type { ReactNode } from 'react'
+
 type GoalProps = {
   title: string
-  description: string
+  children: ReactNode
 }
 
-export default function Goal({ title, description }: GoalProps) {
+export default function Goal({ title, children }: GoalProps) {
   return (
     <article>
       <div>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {children}
         <button>Delete</button>
       </div>
     </article>
