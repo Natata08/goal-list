@@ -2,11 +2,11 @@
 
 A simple and elegant goals tracking application built with React, TypeScript, and Vite. This app allows users to add, view, and delete personal goals with form validation to ensure quality input.
 
-## 🌟 Live Demo
+## Live Demo
 
-**[🚀 Try the live app here!](https://natata08.github.io/goal-list/)**
+**[Try the live app here!](https://natata08.github.io/goal-list/)**
 
-## ✨ Features
+## Features
 
 - **Add Goals**: Create new goals with a title and description
 - **Form Validation**: Prevents submission of empty fields with visual feedback
@@ -14,7 +14,7 @@ A simple and elegant goals tracking application built with React, TypeScript, an
 - **Responsive Design**: Modern, clean UI that works on all devices
 - **TypeScript Support**: Full type safety throughout the application
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -44,14 +44,14 @@ A simple and elegant goals tracking application built with React, TypeScript, an
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## 🛠️ Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start the development server
 - `npm run build` - Build the app for production
 - `npm run preview` - Preview the production build
 - `npm run lint` - Run ESLint for code quality checks
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/
@@ -67,7 +67,7 @@ src/
 └── index.css              # Global styles and validation CSS
 ```
 
-## 🎨 Styling
+## Styling
 
 The app uses a modern design with:
 
@@ -76,7 +76,7 @@ The app uses a modern design with:
 - Gradient backgrounds and subtle shadows
 - Form validation styling with red borders and error messages
 
-## 🔧 Technologies Used
+## Technologies Used
 
 - **React 19** - UI library
 - **TypeScript** - Type-safe JavaScript
@@ -84,7 +84,7 @@ The app uses a modern design with:
 - **ESLint** - Code linting and quality
 - **CSS3** - Styling with modern features
 
-## 📝 Form Validation
+## Form Validation
 
 The app includes robust form validation:
 
@@ -93,7 +93,7 @@ The app includes robust form validation:
 - **Error Messages**: Clear error messages appear below invalid inputs
 - **Trim Whitespace**: Prevents submission of whitespace-only entries
 
-## 🎯 Usage
+## Usage
 
 1. **Adding a Goal**: Fill in both the "Your goal" and "Short summary" fields, then click "Add goal"
 2. **Validation**: If either field is empty, you'll see error messages and red borders
