@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react'
+import TrashIcon from './TrashIcon'
 
 type GoalProps = PropsWithChildren<{
   id: number
@@ -13,7 +14,9 @@ export default function Goal({ id, title, onDelete, children }: GoalProps) {
         <h2>{title}</h2>
         {children}
       </div>
-      <button onClick={() => onDelete(id)}>Delete</button>
+      <button onClick={() => onDelete(id)} title="Delete goal">
+        <TrashIcon />
+      </button>
     </article>
   )
 }

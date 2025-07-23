@@ -169,16 +169,16 @@ li p {
 
 li button {
   font: inherit;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
+  border-radius: 8px;
   color: #a0aec0;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   min-width: 2.5rem;
-  height: 2rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
