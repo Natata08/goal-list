@@ -130,3 +130,14 @@ li button:hover {
   text-align: center;
   color: #acd1ce;
 }
+
+.input-error {
+  border: 2px solid #ff6b6b !important;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.8em;
+  margin-top: 0.25rem;
+  display: block;
+}
