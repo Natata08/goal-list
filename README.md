@@ -27,7 +27,7 @@ A simple and elegant goals tracking application built with React, TypeScript, an
 
    ```bash
    git clone <repository-url>
-   cd todo-list
+   cd goal-list
    ```
 
 2. Install dependencies:
