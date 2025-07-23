@@ -4,7 +4,7 @@ import goalsImg from './assets/goals.jpg'
 import Header from './components/Header.tsx'
 import GoalList from './components/GoalList.tsx'
 
-type Goal = {
+export type Goal = {
   title: string
   description: string
   id: number

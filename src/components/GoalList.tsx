@@ -1,11 +1,8 @@
 import Goal from './Goal.tsx'
+import type { Goal as GoalType } from '../App.tsx'
 
 type GoalListProps = {
-  goals: {
-    title: string
-    description: string
-    id: number
-  }[]
+  goals: GoalType[]
 }
 
 export default function GoalList({ goals }: GoalListProps) {
