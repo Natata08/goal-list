@@ -11,8 +11,8 @@ export default function Goal({ title, children }: GoalProps) {
       <div>
         <h2>{title}</h2>
         {children}
-        <button>Delete</button>
       </div>
+      <button>Delete</button>
     </article>
   )
 }

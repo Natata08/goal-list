@@ -1,7 +1,8 @@
-import Goal from './components/Goal.tsx'
+import { useState } from 'react'
+
 import goalsImg from './assets/goals.jpg'
 import Header from './components/Header.tsx'
-import { useState } from 'react'
+import GoalList from './components/GoalList.tsx'
 
 type Goal = {
   title: string
@@ -29,17 +30,7 @@ export default function App() {
         <h1>Your Goals</h1>
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
-      <ul>
-        {goals.map(({ title, description, id }) => {
-          return (
-            <li key={id}>
-              <Goal title={title}>
-                <p>{description}</p>
-              </Goal>
-            </li>
-          )
-        })}
-      </ul>
+      <GoalList goals={goals} />
     </main>
   )
 }
