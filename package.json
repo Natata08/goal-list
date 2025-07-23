@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Natata08.github.io/goal-list",
+  "homepage": "https://natata08.github.io/goal-list",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

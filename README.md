@@ -2,6 +2,10 @@
 
 A simple and elegant goals tracking application built with React, TypeScript, and Vite. This app allows users to add, view, and delete personal goals with form validation to ensure quality input.
 
+## 🌟 Live Demo
+
+**[🚀 Try the live app here!](https://natata08.github.io/goal-list/)**
+
 ## ✨ Features
 
 - **Add Goals**: Create new goals with a title and description
