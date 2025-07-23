@@ -1,4 +1,4 @@
-import { useRef, useState, type FormEvent } from 'react'
+import { useRef, useState, useEffect, type FormEvent } from 'react'
 
 type NewGoalProps = {
   onAddGoal: (goal: string, summary: string) => void
@@ -8,6 +8,10 @@ export default function NewGoal({ onAddGoal }: NewGoalProps) {
   const goal = useRef<HTMLInputElement>(null)
   const summary = useRef<HTMLInputElement>(null)
   const [errors, setErrors] = useState<{ goal?: string; summary?: string }>({})
+
+  useEffect(() => {
+    goal.current?.focus()
+  }, [])
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -27,6 +31,7 @@ export default function NewGoal({ onAddGoal }: NewGoalProps) {
     if (Object.keys(newErrors).length === 0) {
       event.currentTarget.reset()
       onAddGoal(enteredGoal, enteredSummary)
+      goal.current?.focus()
     }
   }
 
