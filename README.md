@@ -1,69 +1,97 @@
-# React + TypeScript + Vite
+# Goals Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant goals tracking application built with React, TypeScript, and Vite. This app allows users to add, view, and delete personal goals with form validation to ensure quality input.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add Goals**: Create new goals with a title and description
+- **Form Validation**: Prevents submission of empty fields with visual feedback
+- **Delete Goals**: Remove completed or unwanted goals
+- **Responsive Design**: Modern, clean UI that works on all devices
+- **TypeScript Support**: Full type safety throughout the application
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd todo-list
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the app for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint for code quality checks
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.tsx          # App header with image and title
+│   ├── NewGoal.tsx         # Form component for adding new goals
+│   ├── GoalList.tsx        # Component to display list of goals
+│   └── Goal.tsx            # Individual goal item component
+├── assets/
+│   └── goals.jpg           # Header image
+├── App.tsx                 # Main application component
+├── main.tsx               # Application entry point
+└── index.css              # Global styles and validation CSS
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Styling
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The app uses a modern design with:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Custom CSS with a dark theme
+- Poppins font from Google Fonts
+- Gradient backgrounds and subtle shadows
+- Form validation styling with red borders and error messages
+
+## 🔧 Technologies Used
+
+- **React 19** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **ESLint** - Code linting and quality
+- **CSS3** - Styling with modern features
+
+## 📝 Form Validation
+
+The app includes robust form validation:
+
+- **Required Fields**: Both goal title and description are mandatory
+- **Visual Feedback**: Invalid fields show red borders
+- **Error Messages**: Clear error messages appear below invalid inputs
+- **Trim Whitespace**: Prevents submission of whitespace-only entries
+
+## 🎯 Usage
+
+1. **Adding a Goal**: Fill in both the "Your goal" and "Short summary" fields, then click "Add goal"
+2. **Validation**: If either field is empty, you'll see error messages and red borders
+3. **Viewing Goals**: All goals appear in a responsive grid layout
+4. **Deleting Goals**: Click the delete button (×) on any goal to remove it
