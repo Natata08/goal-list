@@ -9,6 +9,10 @@ A simple and elegant goals tracking application built with React, TypeScript, an
 ## Features
 
 - **Add Goals**: Create new goals with a title and description
+- **Smart Goal Management**: Intelligent feedback system that guides users based on goal count
+  - 💡 **Low Warning (3+ goals)**: Gentle encouragement with golden styling
+  - ⚠️ **Medium Warning (5+ goals)**: Productivity reminder with subtle animation
+  - 🚨 **High Warning (8+ goals)**: Overwhelm alert with stronger visual cues
 - **Form Validation**: Prevents submission of empty fields with visual feedback
 - **Delete Goals**: Remove completed or unwanted goals
 - **Responsive Design**: Modern, clean UI that works on all devices
@@ -57,14 +61,16 @@ A simple and elegant goals tracking application built with React, TypeScript, an
 src/
 ├── components/
 │   ├── Header.tsx          # App header with image and title
-│   ├── NewGoal.tsx         # Form component for adding new goals
-│   ├── GoalList.tsx        # Component to display list of goals
-│   └── Goal.tsx            # Individual goal item component
+│   ├── NewGoal.tsx         # Form component for adding new goals with validation
+│   ├── GoalList.tsx        # Component to display list of goals with smart feedback
+│   ├── Goal.tsx            # Individual goal item component
+│   ├── InfoBox.tsx         # Reusable info/warning component with severity levels
+│   └── TrashIcon.tsx       # Reusable SVG trash icon component
 ├── assets/
 │   └── goals.jpg           # Header image
-├── App.tsx                 # Main application component
+├── App.tsx                 # Main application component with state management
 ├── main.tsx               # Application entry point
-└── index.css              # Global styles and validation CSS
+└── index.css              # Global styles, dark theme, and component styling
 ```
 
 ## Styling
@@ -96,6 +102,11 @@ The app includes robust form validation:
 ## Usage
 
 1. **Adding a Goal**: Fill in both the "Your goal" and "Short summary" fields, then click "Add goal"
-2. **Validation**: If either field is empty, you'll see error messages and red borders
-3. **Viewing Goals**: All goals appear in a responsive grid layout
-4. **Deleting Goals**: Click the delete button (×) on any goal to remove it
+2. **Auto-Focus**: The input field automatically focuses for quick goal entry
+3. **Form Validation**: If either field is empty, you'll see error messages and red borders
+4. **Smart Feedback**: As you add more goals, the app provides intelligent guidance:
+   - **3+ goals**: Gentle encouragement to stay focused
+   - **5+ goals**: Productivity reminder with subtle visual cues
+   - **8+ goals**: Warning about potential overwhelm with stronger alerts
+5. **Viewing Goals**: All goals appear in a responsive grid layout
+6. **Deleting Goals**: Click the trash icon (🗑️) on any goal to remove it
